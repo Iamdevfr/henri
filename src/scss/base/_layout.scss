@@ -1,0 +1,16 @@
+@import '_core.scss';
+
+// html, body{
+//   height: 100%;
+// }
+main{
+  flex: 1 0 auto;
+}
+header{
+  background-color: $white;
+}
+
+footer{
+  background-color: $white;
+  flex-shrink: 0;
+}

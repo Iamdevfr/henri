@@ -1,0 +1,93 @@
+@import "_core.scss";
+
+//cta kokiy
+
+.test{
+  // background-image: url(../../images/content/img/kokiy-hero-hd.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 90px;
+
+
+  & .title{
+    // background: url(../assets/img/effectTitle.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 8px 0;
+    width: 400px;
+    position: absolute;
+    top: -10%;
+    color: white;
+
+}  
+  & .content{
+
+      border-radius: 5px;
+      width: 350px;
+      position: absolute;
+      left: 10%;
+      top: 40%;
+      padding: 1rem;
+      background-color: #FFF;
+      box-shadow: 0px 40px 20px 0px rgba(0,0,0,0.2);
+    
+  }
+
+  & .btn-kokiy{
+    position: absolute;
+    background-color: white;
+    bottom: 10%;
+    right: 10%;
+    &:hover{
+      background-color: $accent;
+    }
+  }
+}
+
+.cta-kokiy{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  & .content{
+    display: flex;
+    flex-direction: row;
+
+    &.cta{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    &.img{
+      width: 50%;
+      & img{
+        width: 500px;
+      }
+    }
+  }
+ 
+}
+//Points de ventes
+
+.point-de-vente{
+ 
+  margin-bottom: 100px;
+
+  .g-map{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    iframe{
+      margin-top: -54px;
+    }
+  }
+}
