@@ -12,20 +12,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const environment = require('./configuration/environment');
 
-const templateFiles = fs.readdirSync(environment.paths.source)
-  .filter((file) => path.extname(file).toLowerCase() === '.html');
-
-const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin({
-  inject: true,
-  hash: false,
-  filename: template,
-  template: path.resolve(environment.paths.source, template),
-  favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
-}));
-
 module.exports = {
   entry: {
     app: path.resolve(environment.paths.source, 'js', 'app.js'),
+    scriptKokiy: path.resolve(environment.paths.source, 'js', 'scriptKokiy.js'),
   },
   output: {
     filename: 'js/[name].js',
@@ -100,6 +90,22 @@ module.exports = {
     ],
   },
   plugins: [
+    new HTMLWebpackPlugin({
+      inject: true, //copy-pasted from old code
+      hash: false, //copy-pasted from old code
+      filename: 'index.html',
+      template: path.resolve(environment.paths.source, 'index.html'),
+      favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+      chunks: ['app']
+    }),
+    new HTMLWebpackPlugin({
+      inject: true, //copy-pasted from old code
+      hash: false, //copy-pasted from old code
+      filename: 'kokiy.html',
+      template: path.resolve(environment.paths.source, 'kokiy.html'),
+      favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+      chunks: ['app', 'scriptKokiy']
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
@@ -119,6 +125,6 @@ module.exports = {
         },
       ],
     }),
-  ].concat(htmlPluginEntries),
+  ],
   target: 'web',
 };
