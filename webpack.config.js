@@ -88,6 +88,7 @@ module.exports = {
         },
       }),
     ],
+    runtimeChunk: 'single',
   },
   plugins: [
     new HTMLWebpackPlugin({
