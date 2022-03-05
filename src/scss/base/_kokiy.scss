@@ -42,18 +42,17 @@
   
 }
 
-
 //title
 
 .titleKok{
-  font-size: 10em;
+  font-size: 9.5em;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: 900;
   position: fixed;
   z-index: 9999;
   top: 5%;
-  left: 5%;
+  left: 6.5%;
   color: white;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
@@ -64,17 +63,33 @@
 //Svg kokiy
 
 #kokiyItem{
-  position: absolute;
-  height: 30vmax;
-  width: 30vmax;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  
+  position: absolute;
+
   & .kokiy-img{
     display: block;
   }
+}
+
+#size24{
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  left: 100%;
+  width: auto;
+  top: 40%;
+}
+
+#size17{
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  left: 40%;
+  width: auto;
+  bottom: 100%;
 }
 
 //Header
@@ -115,32 +130,28 @@
   z-index: 1;
   border-bottom: 1px solid black;
 
-  &.slide1{
-    height: auto;
-   
-    & .slide1-1__content{
-      position: absolute;
-      width: 30vmax;
-      height: 30vmax;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border: 1px solid red;
-    }
-
+  & .kokiyInCard{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+  }
     .arrow-1 {
       width:0;
       height:30px;
       display: flex;
       
       &.horizontal{
-        transform: translate(0, -100%);
+        transform: translate(0, -150%);
         color: red;
       }
       
       &.vertical{
         color: black;
-        transform: rotate(90deg) translate(12vmax, -15vmax);
+        transform: rotate(90deg) translate(8vmax, -15vmax);
       }
     }
     .arrow-1:before {
@@ -155,7 +166,7 @@
     }
   }
 
-  &.slide2{
+  .slide2{
     height: 100vh;
 
     & .contentS2{
@@ -168,7 +179,7 @@
       opacity: 0;
     }
   }
-  &.slide3{
+  .slide3{
     height: 100vh;
 
     & .contentS3{
@@ -181,7 +192,7 @@
     }
   }
 
-  & .content {
+   .content {
     position: absolute;
     overflow: hidden;
   
@@ -196,7 +207,7 @@
     }
   
   }
-}
+
 
 
 
@@ -233,13 +244,14 @@
   .title2{
     top: 130%;
     z-index: 0;
-    font-size: 80vmax;
+    font-size: 50vmax;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     transform: rotate(90deg);
     position: fixed;
     opacity: .1;
+    color: $accent;
 
   }
 
