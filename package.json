@@ -63,6 +63,7 @@
   },
   "target": "web",
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "fslightbox": "^3.3.1",
     "gsap": "npm:@gsap/shockingly@^3.9.1",
     "jquery": "^3.6.0"

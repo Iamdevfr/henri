@@ -1,3 +1,4 @@
+import barba from '@barba/core';
 import '../scss/app.scss';
 
 import '../js/heroSectionAnims'
@@ -29,3 +30,17 @@ $(document).ready(function() {
   // });
 });
 
+barba.init({
+  transitions: [
+    {
+      name: 'indexToKokiy',
+      sync: true,
+      to: { namespace: ['kokiy'] },
+      once() {},
+      leave() {
+        console.log("\n\n\n\n\n\n\n\n\n\nLeave transition")
+      },
+      enter() {},
+    },
+  ],
+});
