@@ -39,7 +39,6 @@ const kokiyAnim = new gsap.timeline()
 
 
 kokiyAnim
-
   
   .to(kokiy,{
   scrollTrigger:{
