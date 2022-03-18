@@ -3,11 +3,19 @@
 
 //title
 
-.title{
-  font-size: 5em;
-  text-align: center;
-  text-transform: capitalize;
-  margin: 1em 0 ;
+.mainTitle{
+  font-size: 9.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: fixed;
+  z-index: 9999;
+  top: 5%;
+  left: 6.5%;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  mix-blend-mode: difference;
 }
 
 //Button

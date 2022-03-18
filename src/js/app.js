@@ -1,7 +1,6 @@
 import '../scss/app.scss';
 
 // import '../js/heroSectionAnims'
-// import "../js/galleryAnim"
 import "../js/kokiyAnim.js"
 
 import $ from "jquery";

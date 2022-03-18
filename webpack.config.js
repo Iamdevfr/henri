@@ -16,6 +16,8 @@ module.exports = {
   entry: {
     app: path.resolve(environment.paths.source, 'js', 'app.js'),
     scriptKokiy: path.resolve(environment.paths.source, 'js', 'scriptKokiy.js'),
+    scriptLanding: path.resolve(environment.paths.source, 'js', 'heroSectionAnims.js'),
+
   },
   output: {
     filename: 'js/[name].js',
@@ -96,7 +98,7 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(environment.paths.source, 'index.html'),
       favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
-      chunks: ['app']
+      chunks: ['scriptLanding', 'app']
     }),
     new HTMLWebpackPlugin({
       inject: true, //copy-pasted from old code
